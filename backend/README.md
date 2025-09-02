@@ -123,8 +123,12 @@ docker compose -f compose.dev.yaml up -d
 docker compose -f compose.dev.yaml exec workspace bash
 
 composer install
+
 php artisan key:generate
 php artisan config:cache
+
+php artisan migrate
+php artisan db:seed
 exit
 
 docker compose -f compose.dev.yaml down

@@ -19,5 +19,8 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // Import data from property-data.csv
+        $this->call(RealtySeeder::class);
     }
 }
