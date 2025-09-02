@@ -24,7 +24,7 @@ class RealtyController extends Controller
      * @param Request $request
      * @return JsonResponse
      */
-    public function search(Request $request): JsonResponse
+    public function search(Request $request)
     {
         $params = $request->all();
         $realties = $this->realtyService->searchRealty($params);
