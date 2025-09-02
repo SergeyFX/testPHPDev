@@ -127,18 +127,19 @@ composer install
 php artisan key:generate
 php artisan config:cache
 
+
+```
+
+4. Run Migrations and Seeding:
+
+```bash
+docker compose -f compose.dev.yaml exec workspace bash
 php artisan migrate
 php artisan db:seed
 exit
 
 docker compose -f compose.dev.yaml down
 docker compose -f compose.dev.yaml up -d --build
-```
-
-4. Run Migrations:
-
-```bash
-docker compose -f compose.dev.yaml exec workspace php artisan migrate
 ```
 
 5. Access the Application:
@@ -213,4 +214,4 @@ The production image can be deployed to any Docker-compatible hosting environmen
 
 ## License
 
-This project created by Fitkullin Sergey for test project
+This project created by Fitkullin Sergey for test project 
